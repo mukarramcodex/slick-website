@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+// import { Link } from 'react-router-dom';
+// import { Button } from '@components/ui/button';
 
 export default function ContactCTA() {
   return (
@@ -17,9 +18,12 @@ export default function ContactCTA() {
         <p className="text-lg md:text-xl text-gray-300 mb-10">
           Reach out to discuss your next project. We’re always ready to bring ideas to life.
         </p>
-        <Button className="bg-[#e6002e] text-white px-8 py-4 text-lg rounded-full shadow-lg hover:scale-105 hover:shadow-[#e6002e]/60 transition-all">
+        {/* <Button className="bg-[#e6002e] text-white px-8 py-4 text-lg rounded-full shadow-lg hover:scale-105 hover:shadow-[#e6002e]/60 transition-all">
           Contact Us
-        </Button>
+        </Button> */}
+        <div className="bg-[#e6002e] text-white mx-32 px-2 py-4 text-lg rounded-full shadow-lg hover:scale-105 hover:shadow-[#e6002e]/60 transition-all">
+          Contact Us
+        </div>
       </div>
 
       {/* Subtle Background Light Spots */}
@@ -27,6 +31,8 @@ export default function ContactCTA() {
         <div className="absolute w-48 h-48 bg-white opacity-5 rounded-full top-10 left-10 blur-3xl"></div>
         <div className="absolute w-32 h-32 bg-white opacity-5 rounded-full bottom-10 right-10 blur-2xl"></div>
       </div>
+      
     </motion.section>
+    
   );
 }
