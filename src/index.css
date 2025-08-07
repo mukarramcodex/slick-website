@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium Dark Theme - Slick Digital Agency */
+    --background: 0 0% 0%;
+    --foreground: 210 17% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 210 17% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 210 17% 98%;
+
+    --primary: 0 79% 51%;
+    --primary-foreground: 210 17% 98%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 210 17% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 0 79% 51%;
+    --accent-foreground: 210 17% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 17% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 79% 51%;
+
+    --radius: 0.75rem;
+
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 79% 51%) 0%, hsl(0 95% 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 79% 51% / 0.1) 0%, hsl(0 79% 51% / 0.05) 100%);
+    
+    /* Shadows */
+    --shadow-premium: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 40px hsl(0 79% 51% / 0.2);
+    --shadow-subtle: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+
+    /* Typography */
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
