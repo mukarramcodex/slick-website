@@ -1,153 +1,111 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React, { useEffect, useRef } from 'react';
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { NavbarProps } from './NavbarTypes';
-import SlickLogo from '@/assets/SlickLogo.svg';
+import { navItems } from './NavbarData';
 
-export default function Navbar({ data }: NavbarProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const Navbar: React.FC<NavbarProps> = ({ isScrolled, isMobileMenuOpen, setIsMobileMenuOpen }) => {
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
+  // Close mobile menu on escape key
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  const handleNavClick = (href: string) => {
-  if (href.startsWith('http')) {
-    window.open(href, '_blank', 'noopener,noreferrer');
-  } else {
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    // Close mobile menu when clicking outside
+    const handleClickOutside = (e: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(e.target as Node) && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('mousedown', handleClickOutside);
     }
-  }
-};
 
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen, setIsMobileMenuOpen]);
+
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-premium' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <motion.a
-            href={data.logo.href}
-            className="flex items-center space-x-3 group"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <img 
-              src={SlickLogo} 
-              alt="Slick Digital Agency" 
-              className="h-8 w-auto lg:h-10 transition-transform group-hover:scale-110"
-            />
-            <span className="font-heading font-bold text-lg lg:text-xl text-foreground">
-              {data.logo.text}
-            </span>
-          </motion.a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {data.navItems.map((item, index) => (
-              <motion.a
-                key={item.label}
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'backdrop-blur-md bg-black/90' : 'bg-black/70'}`}>
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="text-2xl font-bold">
+          Slick<span className="text-[#e6002e]">Digital</span>
+        </div>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center">
+          <nav className="flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
                 href={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium relative group cursor-pointer"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                className="text-white hover:text-[#e6002e] transition-colors cursor-pointer"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </motion.a>
+              </a>
             ))}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={() => handleNavClick(data.cta.href)}
-                className="ml-4"
-              >
-                {data.cta.text}
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:bg-accent"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
+          </nav>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+        {/* Desktop Get in Touch Button */}
+        <Button className="hidden md:flex !rounded-button whitespace-nowrap bg-[#e6002e] hover:bg-[#e6002e]/80 text-white shadow-[0_0_20px_rgba(230,0,46,0.5)] hover:shadow-[0_0_30px_rgba(230,0,46,0.7)] transition-all cursor-pointer">
+          Get in Touch
+        </Button>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div 
+            ref={mobileMenuRef}
+            id="mobile-menu"
+            className="absolute top-full left-0 right-0 bg-black/95 border-t border-gray-800 py-6 md:hidden"
           >
-            <div className="container mx-auto px-4 py-6">
-              <div className="flex flex-col space-y-4">
-                {data.navItems.map((item, index) => (
-                  <motion.a
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => handleNavClick(item.href)}
-                    className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2 cursor-pointer"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    {item.label}
-                  </motion.a>
-                ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: data.navItems.length * 0.1 }}
-                  className="pt-4"
+            <nav className="flex flex-col items-center space-y-6">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-white hover:text-[#e6002e] transition-colors cursor-pointer"
+                  onClick={handleNavClick}
                 >
-                  <Button
-                    variant="hero"
-                    size="lg"
-                    onClick={() => handleNavClick(data.cta.href)}
-                    className="w-full"
-                  >
-                    {data.cta.text}
-                  </Button>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
+                  {item.label}
+                </a>
+              ))}
+              {/* Mobile Get in Touch Button */}
+              <Button 
+                className="!rounded-button whitespace-nowrap bg-[#e6002e] hover:bg-[#e6002e]/80 text-white shadow-[0_0_20px_rgba(230,0,46,0.5)] hover:shadow-[0_0_30px_rgba(230,0,46,0.7)] transition-all cursor-pointer mt-4"
+                onClick={handleNavClick}
+              >
+                Get in Touch
+              </Button>
+            </nav>
+          </div>
         )}
-      </AnimatePresence>
-    </motion.nav>
+      </div>
+    </header>
   );
-}
+};
+
+export default Navbar;
