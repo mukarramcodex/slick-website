@@ -11,6 +11,7 @@ import Home from '@/pages/home/Home';
 import About from '@/pages/about/About';
 import NotFound from "./pages/NotFound";
 import Contact from './pages/contact/Contact';
+import Services from './pages/services/Services';
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

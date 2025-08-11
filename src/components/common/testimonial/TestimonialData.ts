@@ -1,25 +1,32 @@
-import { Testimonial } from './TestimonialTypes';
+import { TestimonialCardProps } from './TestimonialTypes';
 
-export const testimonials: Testimonial[] = [
+export const testimonialData: TestimonialCardProps[] = [
   {
     name: 'Sarah Johnson',
-    position: 'CEO, TechCorp',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b589?w=80&h=80&fit=crop&crop=face',
-    review: 'Slick Digital transformed our digital presence completely. Their attention to detail and innovative approach exceeded all expectations.',
-    rating: 5
+    role: 'CEO',
+    company: 'TechVision Inc.',
+    testimonial: 'Working with Slick Digital Agency transformed our online presence. Their attention to detail and innovative approach exceeded our expectations.',
+    avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg'
   },
   {
     name: 'Michael Chen',
-    position: 'CTO, StartupX',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-    review: 'The team delivered a cutting-edge solution that revolutionized our workflow. Exceptional quality and timely delivery.',
-    rating: 5
+    role: 'Marketing Director',
+    company: 'Global Solutions',
+    testimonial: 'The team&quot;s creativity and technical expertise helped us achieve remarkable results. They&quot;re truly partners in our success.',
+    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg'
   },
   {
-    name: 'Emily Rodriguez',
-    position: 'Marketing Director, GrowthCo',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
-    review: 'Outstanding creativity and technical expertise. They understood our vision and brought it to life beautifully.',
-    rating: 5
+    name: 'Emma Davis',
+    role: 'Founder',
+    company: 'Innovate Labs',
+    testimonial: 'Their strategic approach and dedication to quality made all the difference. We&quot;ve seen incredible growth since launching our new platform.',
+    avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg'
+  },
+  {
+    name: 'James Wilson',
+    role: 'CTO',
+    company: 'Future Tech',
+    testimonial: 'The level of professionalism and technical expertise is outstanding. They delivered a solution that perfectly matched our vision.',
+    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'
   }
 ];

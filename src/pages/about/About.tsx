@@ -7,7 +7,7 @@ import CompanyTimeline from '@/components/about/companyTimeline/CompanyTimeline'
 import Testimonial from '@/components/common/testimonial/Testimonial';
 import CallToAction from '@/components/common/callToAction/CallToAction';
 import { useState } from 'react';
-import { testimonials } from '@/components/common/testimonial/TestimonialData';
+import { testimonialData } from '@/components/common/testimonial/TestimonialData';
 
 const About: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -19,11 +19,7 @@ const About: React.FC = () => {
       <Values />
       <Team />
       <CompanyTimeline />
-      <Testimonial 
-        testimonials={testimonials}
-        activeTestimonial={activeTestimonial}
-        setActiveTestimonial={setActiveTestimonial}
-      />
+      <Testimonial testimonials={testimonialData} />
       <CallToAction />
     </div>
   );
