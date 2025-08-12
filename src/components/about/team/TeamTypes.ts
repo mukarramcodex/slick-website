@@ -4,7 +4,6 @@ export interface TeamMember {
   image: string;
   bio: string;
   expertise: string[];
-  achievements: string[];
 }
 
 export interface TeamProps {

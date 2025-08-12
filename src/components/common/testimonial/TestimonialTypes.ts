@@ -1,13 +1,11 @@
-export interface Testimonial {
+export interface TestimonialCardProps {
   name: string;
-  position: string;
-  image: string;
-  review: string;
-  rating: number;
+  role: string;
+  company: string;
+  testimonial: string;
+  avatar: string;
 }
 
 export interface TestimonialProps {
-  testimonials: Testimonial[];
-  activeTestimonial: number;
-  setActiveTestimonial: (index: number) => void;
+  testimonials: TestimonialCardProps[];
 }

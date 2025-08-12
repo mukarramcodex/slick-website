@@ -1,40 +1,25 @@
-import React from 'react';
-import { Testimonial } from './TestimonialTypes';
+import { motion } from 'framer-motion';
+import { TestimonialCardProps } from './TestimonialTypes';
 
-interface TestimonialCardProps {
-  testimonial: Testimonial;
-  isActive: boolean;
-  onClick: () => void;
-}
-
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, isActive, onClick }) => {
+const TestimonialCard = ({ name, role, company, testimonial, avatar }: TestimonialCardProps) => {
   return (
-    <div
-      className={`flex-shrink-0 w-80 p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
-        isActive
-          ? 'bg-gradient-to-b from-[#e6002e]/10 to-black/50 border-[#e6002e]/50 shadow-[0_0_30px_rgba(230,0,46,0.2)]'
-          : 'bg-gradient-to-b from-gray-900/50 to-black/50 border-gray-800'
-      }`}
-      onClick={onClick}
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="flex w-[80%] shrink-0 flex-col items-center rounded-2xl border border-border bg-background p-6 shadow-lg transition-shadow hover:shadow-xl sm:w-[60%] md:w-[40%] lg:w-[30%]"
     >
-      <div className="flex items-center mb-6">
-        <img
-          src={testimonial.image}
-          alt={testimonial.name}
-          className="w-16 h-16 rounded-full object-cover mr-4 shadow-[0_0_20px_rgba(230,0,46,0.3)]"
-        />
-        <div>
-          <h4 className="font-bold">{testimonial.name}</h4>
-          <p className="text-gray-400 text-sm">{testimonial.position}</p>
-        </div>
+      <img
+        src={avatar}
+        alt={name}
+        className="mb-4 h-20 w-20 rounded-full object-cover"
+      />
+      <p className="mb-6 text-text-muted">{testimonial}</p>
+      <div className="text-center">
+        <h4 className="text-lg font-semibold text-text-main">{name}</h4>
+        <p className="text-sm text-text-muted">
+          {role} at {company}
+        </p>
       </div>
-      <p className="text-gray-300 mb-4 leading-relaxed">"{testimonial.review}"</p>
-      <div className="flex text-[#e6002e]">
-        {[...Array(testimonial.rating)].map((_, i) => (
-          <i key={i} className="ph-star-fill text-lg"></i>
-        ))}
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

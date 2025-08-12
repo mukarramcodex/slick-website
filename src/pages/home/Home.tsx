@@ -9,8 +9,8 @@ import CallToAction from '@/components/common/callToAction/CallToAction';
 
 import { services } from '@/components/service/ServiceData';
 import { caseStudies } from '@/components/caseStudy/CaseStudyData';
-import { testimonials } from '@/components/common/testimonial/TestimonialData';
 import { galleryItems } from '@/components/gallery/GalleryData';
+import { testimonialData } from '@/components/common/testimonial/TestimonialData';
 
 const Home: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -27,12 +27,9 @@ const Home: React.FC = () => {
       <Intro services={introServices} />
       <Service services={services} />
       <CaseStudy caseStudies={caseStudies} />
-      <Testimonial 
-        testimonials={testimonials}
-        activeTestimonial={activeTestimonial}
-        setActiveTestimonial={setActiveTestimonial}
-      />
+      
       <Gallery galleryItems={galleryItems} />
+       <Testimonial testimonials={testimonialData} />
       <CallToAction />
     </div>
   );
