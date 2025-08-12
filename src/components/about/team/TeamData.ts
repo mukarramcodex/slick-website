@@ -1,5 +1,6 @@
 import { TeamMember } from './TeamTypes';
 import ProfileImage from '@/assets/about/ProfileImage.jpg';
+import MukarramAli from '@/assets/about/MMukarramAli.jpg';
 
 export const teamMembers: TeamMember[] = [
   {
@@ -12,7 +13,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Muhammad Mukaram Ali',
     position: 'CTO & Lead Developer',
-    image: 'https://readdy.ai/api/search-image?query=professional%20male%20software%20developer%20CTO%20portrait%20with%20dark%20background%20red%20accent%20lighting%20technical%20executive%20headshot%20modern%20corporate%20style%20clean%20appearance&width=300&height=300&seq=team2&orientation=squarish',
+    image: MukarramAli,
     bio: 'I\'m Mukarram Ali, a Full Stack PHP/Laravel & WordPress Developer creating modern, responsive, and SEO-friendly web solutions. I build scalable, user-focused websites that deliver performance and impact.',
     expertise: ['PHP/Laravel Development', 'WordPress (Custom & Full Stack)', 'Front-End (React, Vue, Tailwind CSS, Bootstrap)','QA Automation & Testing']
   },
