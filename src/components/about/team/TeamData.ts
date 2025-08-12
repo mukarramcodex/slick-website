@@ -22,8 +22,8 @@ export const teamMembers: TeamMember[] = [
     name: 'Nabia Waqar',
     position: 'Head of Design',
     image: NabiaWaqar,
-    bio: 'Emily is a creative visionary with 10+ years in UX/UI design, specializing in user-centered design that combines aesthetic appeal with functional excellence.',
-    expertise: ['UI/UX Design', 'Brand Identity', 'User Research']
+    bio: 'With 2+ years in the design industry, Nabia Waqar creates visually compelling graphics and intuitive digital interfaces, blending creativity with functionality to enhance user experiences and elevate brand presence.',
+    expertise: ['User-Centered UX/UI Design', 'Brand Identity & Visual Strategy', 'Responsive Web & Mobile App Design', 'Wireframing & Interactive Prototyping', 'Creative Marketing Assets']
   },
   
 ];
