@@ -17,7 +17,7 @@ export const teamMembers: TeamMember[] = [
     expertise: ['PHP/Laravel Development', 'WordPress (Custom & Full Stack)', 'Front-End (React, Vue, Tailwind CSS, Bootstrap)','QA Automation & Testing']
   },
   {
-    name: 'Emily Rodriguez',
+    name: 'Nabia Waqar',
     position: 'Head of Design',
     image: 'https://readdy.ai/api/search-image?query=professional%20female%20UX%20designer%20portrait%20with%20dark%20background%20red%20accent%20lighting%20creative%20professional%20headshot%20modern%20corporate%20style%20clean%20appearance&width=300&height=300&seq=team3&orientation=squarish',
     bio: 'Emily is a creative visionary with 10+ years in UX/UI design, specializing in user-centered design that combines aesthetic appeal with functional excellence.',
