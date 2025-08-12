@@ -13,8 +13,8 @@ export const teamMembers: TeamMember[] = [
     name: 'Muhammad Mukaram Ali',
     position: 'CTO & Lead Developer',
     image: 'https://readdy.ai/api/search-image?query=professional%20male%20software%20developer%20CTO%20portrait%20with%20dark%20background%20red%20accent%20lighting%20technical%20executive%20headshot%20modern%20corporate%20style%20clean%20appearance&width=300&height=300&seq=team2&orientation=squarish',
-    bio: 'Michael brings 12+ years of full-stack development experience, having worked with Fortune 500 companies to build scalable, high-performance digital solutions.',
-    expertise: ['Full-Stack Development', 'System Architecture', 'Team Leadership']
+    bio: 'I\'m Mukarram Ali, a Full Stack PHP/Laravel & WordPress Developer creating modern, responsive, and SEO-friendly web solutions. I build scalable, user-focused websites that deliver performance and impact.',
+    expertise: ['PHP/Laravel Development', 'WordPress (Custom & Full Stack)', 'Front-End (React, Vue, Tailwind CSS, Bootstrap)','QA Automation & Testing']
   },
   {
     name: 'Emily Rodriguez',
