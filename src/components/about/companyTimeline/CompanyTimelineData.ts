@@ -20,12 +20,6 @@ export const timeline: TimelineItem[] = [
     image: 'https://readdy.ai/api/search-image?query=diverse%20professional%20team%20meeting%20in%20modern%20office%20with%20dark%20background%20red%20accent%20lighting%20collaborative%20workspace%20team%20growth%20clean%20corporate%20environment&width=400&height=250&seq=timeline3&orientation=landscape'
   },
   {
-    year: '2023',
-    title: 'Innovation Awards',
-    description: 'Received multiple industry awards for innovation in digital design and development, including the prestigious Digital Excellence Award.',
-    image: 'https://readdy.ai/api/search-image?query=award%20ceremony%20trophy%20recognition%20with%20dark%20background%20red%20accent%20lighting%20achievement%20celebration%20professional%20success%20clean%20corporate%20style&width=400&height=250&seq=timeline4&orientation=landscape'
-  },
-  {
     year: '2024',
     title: 'Global Reach',
     description: 'Expanded services internationally, working with clients across North America, Europe, and Asia, establishing Slick Digital as a global digital agency.',
