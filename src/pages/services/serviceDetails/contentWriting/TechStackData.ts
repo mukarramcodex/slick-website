@@ -1,4 +1,4 @@
-import { TechStackCategory } from './TechStackTypes';
+import { TechStackCategory } from '@/components/service/techStack/TechStackTypes';
 
 export const techStackData: TechStackCategory[] = [
   {

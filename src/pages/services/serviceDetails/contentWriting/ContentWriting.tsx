@@ -14,19 +14,19 @@ const ContentWriting = () => {
   return (
     <div>
       <ServiceDetailHero
-      backgroundImg= {ContentHeroBg}
-       backgroundImgAlt="Creative team working"
-  heading="Content & Communication"
-  paragraph="Transform your brand story with strategic content that engages, converts, and builds lasting relationships..."
-  btnText="Get Started Today"
-  btnLink="/contact"
-  features={[
-    "Strategic Planning",
-    "Multi-Channel Approach",
-    "Data-Driven Results",
-  ]}
-    />
-    <ServiceOffered
+        backgroundImg={ContentHeroBg}
+        backgroundImgAlt="Creative team working"
+        heading="Content & Communication"
+        paragraph="Transform your brand story with strategic content that engages, converts, and builds lasting relationships..."
+        btnText="Get Started Today"
+        btnLink="/contact"
+        features={[
+          "Strategic Planning",
+          "Multi-Channel Approach",
+          "Data-Driven Results",
+        ]}
+      />
+      <ServiceOffered
         heading="Our Services"
         tagline="Choose from our comprehensive range of professional services designed to meet your specific needs"
         categories={writingData.categories}
@@ -36,7 +36,7 @@ const ContentWriting = () => {
         customButtonText="Need Custom Solutions?"
         customButtonLink="/contact"
       />
-    <TechStack
+      <TechStack
         heading="Technology Stack"
         tagline="We leverage the latest technologies and frameworks to build robust, scalable, and future-proof solutions"
         categories={techStackData}

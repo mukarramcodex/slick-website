@@ -1,6 +1,6 @@
 import React from 'react';
 import TechStackCard from './TechStackCard';
-import { TechStackProps } from '../../../pages/services/serviceDetails/contentWriting/TechStackTypes';
+import { TechStackProps } from '@/components/service/techStack/TechStackTypes';
 
 const TechStack: React.FC<TechStackProps> = ({ 
   heading,
@@ -34,7 +34,7 @@ const TechStack: React.FC<TechStackProps> = ({
         {/* Technology Grid */}
         <div 
           key={activeCategory}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 animate-fade-in"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate-fade-in"
         >
           {currentTechStack.technologies.map((technology, index) => (
             <TechStackCard 

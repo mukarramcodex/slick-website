@@ -1,5 +1,5 @@
 import React from 'react';
-import { TechStackCardProps } from '../../../pages/services/serviceDetails/contentWriting/TechStackTypes';
+import { TechStackCardProps } from '@/components/service/techStack/TechStackTypes';
 
 const TechStackCard: React.FC<TechStackCardProps> = ({ technology, index }) => {
   return (
@@ -54,7 +54,7 @@ const TechStackCard: React.FC<TechStackCardProps> = ({ technology, index }) => {
         )}
         
         {/* Hover indicator */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-slick-red to-slick-red/80 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-slick-red to-slick-red/80 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div> */}
       </div>
     </div>
   );
