@@ -1,6 +1,6 @@
 import Process from "@/components/service/serviceDetail/process/Process";
 
-const developmentProcess = [
+export const developmentProcess = [
     {
         step: 1,
         title: "Discovery & Planning",
@@ -49,4 +49,4 @@ const developmentProcess = [
         timeline: "Ongoing",
         icon: "fas fa-tools",
     },
-];
+]

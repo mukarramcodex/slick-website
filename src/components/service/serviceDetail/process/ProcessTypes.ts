@@ -1,7 +1,7 @@
 export interface ProcessStep {
     step: number;
     title: string;
-    desctiption: string;
+    description: string;
     timeline: string;
     icon: string;
 }

@@ -31,8 +31,8 @@ const Process: React.FC<ProcessProps> = ({
                         <div
                             key={index}
                             className={`p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${activeStep === index
-                                    ? "bg-gradient-to-b from-[#e6002e]/10 to-black/50 border-[#e60002e]/50 shadow-[0_0_30px_rgba(230,0,46,0.2)]"
-                                    : "bg-gradient-to-b from-gray-900/30 to-black/30 border-gray-800 hover:border-[#e6002e]/30"
+                                ? "bg-gradient-to-b from-[#e6002e]/10 to-black/50 border-[#e60002e]/50 shadow-[0_0_30px_rgba(230,0,46,0.2)]"
+                                : "bg-gradient-to-b from-gray-900/30 to-black/30 border-gray-800 hover:border-[#e6002e]/30"
                                 }`}
                             onClick={() => setActiveStep(index)}
                         >
@@ -48,14 +48,14 @@ const Process: React.FC<ProcessProps> = ({
                                 {step.title}
                             </h3>
                             <p className="text-gray-300 mb-4 leading-relaxed">
-                                {step.desctiption}
+                                {step.description}
                             </p>
                             <div className="flex items-center text-sm text-gray-400">
                                 <i className="fas fa-clock mr-2 text-[#e6002e]"></i>
                                 {step.timeline}
                             </div>
                         </div>
-                    ))};
+                    ))}
                 </div>
             </div>
         </section>
