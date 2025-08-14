@@ -6,8 +6,8 @@ const Design = () => {
       <ServiceDetailHero
       backgroundImg= {ContentHeroBg}
        backgroundImgAlt="Creative team working"
-  heading="Content & Communication"
-  paragraph="Transform your brand story with strategic content that engages, converts, and builds lasting relationships..."
+  heading="Design Services"
+  paragraph="Create stunning visual experiences that captivate your audience and elevate your brand. Our design team crafts beautiful, functional designs that drive engagement and conversions."
   btnText="Get Started Today"
   btnLink="/contact"
   features={[
@@ -15,12 +15,7 @@ const Design = () => {
     "Multi-Channel Approach",
     "Data-Driven Results",
   ]}
-  rightImage="https://readdy.ai/api/search-image?query=creative%20content%20strategy%20meeting..."
-  rightImageAlt="Content Strategy Team"
-  statIcon="ph ph-chart-line-up"
-  statValue="300%"
-  statLabel="Engagement Increase"
-    />
+  />
     </div>
   )
 }

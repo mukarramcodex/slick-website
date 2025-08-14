@@ -1,7 +1,14 @@
 import ServiceDetailHero from '@/components/service/serviceDetail/hero/ServiceDetailHero'
-import React from 'react'
+import React, { useState } from 'react'
 import ContentHeroBg from "../../../../assets/serviceDetail/contentWriting/ContentHeroBg.jpg"
+import TechStack from '../../../../components/service/techStack/TechStack'
+import { techStackData } from './TechStackData'
 const ContentWriting = () => {
+  const [activeCategory, setActiveCategory] = useState('writing-services');
+
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+  };
   return (
     <div>
       <ServiceDetailHero
@@ -16,12 +23,15 @@ const ContentWriting = () => {
     "Multi-Channel Approach",
     "Data-Driven Results",
   ]}
-  rightImage="https://readdy.ai/api/search-image?query=creative%20content%20strategy%20meeting..."
-  rightImageAlt="Content Strategy Team"
-  statIcon="ph ph-chart-line-up"
-  statValue="300%"
-  statLabel="Engagement Increase"
     />
+    <TechStack
+        heading="Technology Stack"
+        tagline="We leverage the latest technologies and frameworks to build robust, scalable, and future-proof solutions"
+        categories={techStackData}
+        activeCategory={activeCategory}
+        buttonText="Explore Our Tools"
+        buttonLink="/technologies"
+      />
     </div>
   )
 }

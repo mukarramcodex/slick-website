@@ -18,7 +18,7 @@ const ServiceDetailHero = ({
   statLabel,
 }) => {
   return (
-    <section className="min-h-screen pt-24 pb-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden flex items-center">
+    <section className="min-h-screen pt-24 pb-20 bg-gradient-to-br from-black to-gray-600 relative overflow-hidden flex items-center">
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0 opacity-20 mix-blend-overlay"
