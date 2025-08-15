@@ -7,6 +7,7 @@ import ServiceOffered from '@/components/service/serviceDetail/serviceOffered/Se
 import { writingData } from './WritingData'
 import Process from '@/components/service/serviceDetail/process/Process'
 import { writingdevelopmentProcess } from './ProcessData'
+import Faqs from '@/components/common/faqs/Faqs'
 const ContentWriting = () => {
   const [activeCategory, setActiveCategory] = useState('writing-services');
 
@@ -49,6 +50,10 @@ const ContentWriting = () => {
       tagline='From planning to maintenance, we ensure a streamlined workflow.'
       steps={writingdevelopmentProcess}
       />
+      {/* <Faqs
+      question={}
+      answer={}
+      /> */}
     </div>
   )
 }
