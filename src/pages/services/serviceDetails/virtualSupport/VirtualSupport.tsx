@@ -8,6 +8,10 @@ import Process from "@/components/service/serviceDetail/process/Process";
 import { VirtualData } from "./VirtualData";
 import { techData } from "./TechStackData";
 import { virtualdevelopmentProcess } from "./ProcessData";
+import Benifits from "@/components/service/benifits/Benifits";
+import Faqs from "@/components/common/faqs/Faqs";
+import CallToAction from "@/components/common/callToAction/CallToAction";
+import { virtualFaqData } from "./FaqsData";
 const VirtualSupport = () => {
   const [activeCategory, setActiveCategory] = useState('virtual-services');
   
@@ -50,6 +54,9 @@ const VirtualSupport = () => {
       tagline='From planning to maintenance, we ensure a streamlined workflow.'
       steps={virtualdevelopmentProcess}
       />
+      <Benifits/>
+      <Faqs faqs={virtualFaqData}/>
+      <CallToAction/>
     </div>
   )
 }

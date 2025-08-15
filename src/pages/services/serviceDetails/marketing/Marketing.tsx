@@ -7,6 +7,10 @@ import TechStack from "@/components/service/techStack/TechStack";
 import { techData } from "./TechStackData";
 import Process from "@/components/service/serviceDetail/process/Process";
 import { marketingdevelopmentProcess } from "./ProcessData";
+import Benifits from "@/components/service/benifits/Benifits";
+import Faqs from "@/components/common/faqs/Faqs";
+import CallToAction from "@/components/common/callToAction/CallToAction";
+import { marketingFaqData } from "./FaqsData";
 const Marketing = () => {
   const [activeCategory, setActiveCategory] = useState('marketing-services');
 
@@ -54,6 +58,9 @@ const Marketing = () => {
         tagline="Tagline"
         steps={marketingdevelopmentProcess}
       />
+      <Benifits/>
+      <Faqs faqs={marketingFaqData}/>
+      <CallToAction/>
     </div>
   )
 }

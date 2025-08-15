@@ -7,6 +7,10 @@ import TechStack from "@/components/service/techStack/TechStack"
 import { techData } from "./TechStackData"
 import Process from "@/components/service/serviceDetail/process/Process"
 import { designdevelopmentProcess } from "./ProcessData"
+import Benifits from "@/components/service/benifits/Benifits"
+import Faqs from "@/components/common/faqs/Faqs"
+import CallToAction from "@/components/common/callToAction/CallToAction"
+import { designFaqData } from "./FaqsData"
 const Design = () => {
 const [activeCategory, setActiveCategory] = useState('writing-services');
 
@@ -49,6 +53,9 @@ const [activeCategory, setActiveCategory] = useState('writing-services');
             tagline='From planning to maintenance, we ensure a streamlined workflow.'
             steps={designdevelopmentProcess}
       />
+      <Benifits/>
+      <Faqs faqs={designFaqData} />
+      <CallToAction/>
     </div>
   )
 }
