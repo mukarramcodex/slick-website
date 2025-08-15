@@ -38,7 +38,7 @@ const Process: React.FC<ProcessProps> = ({
                         >
                             <div className="flex items-center mb-4">
                                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#e6002e]/20 to-transparent flex items-center justify-center mr-4">
-                                    <i className={`${step.icon} text-xl text-[#e6002e]`}></i>
+                                    <i className={`${step.icon} text-xl text-[#ffffff]`}></i>
                                 </div>
                                 <div className="text-sm text-[#e6002e] font-semibold">
                                     Step {step.step}
