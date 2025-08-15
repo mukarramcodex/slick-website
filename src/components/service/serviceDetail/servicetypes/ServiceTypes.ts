@@ -19,6 +19,6 @@ export interface ServiceOfferedProps {
   className?: string;
 }
 
-export interface DesignData {
+export interface ServiceData {
   categories: ServiceCategory[];
 }

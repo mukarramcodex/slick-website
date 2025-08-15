@@ -6,7 +6,7 @@ import { useState } from "react"
 import TechStack from "@/components/service/techStack/TechStack"
 import { techData } from "./TechStackData"
 import Process from "@/components/service/serviceDetail/process/Process"
-import { developmentProcess } from "./ProcessData"
+import { designdevelopmentProcess } from "./ProcessData"
 const Design = () => {
 const [activeCategory, setActiveCategory] = useState('writing-services');
 
@@ -47,7 +47,7 @@ const [activeCategory, setActiveCategory] = useState('writing-services');
       <Process 
       heading='Our Development Process'
             tagline='From planning to maintenance, we ensure a streamlined workflow.'
-            steps={developmentProcess}
+            steps={designdevelopmentProcess}
       />
     </div>
   )

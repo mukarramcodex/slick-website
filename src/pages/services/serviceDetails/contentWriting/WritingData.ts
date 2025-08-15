@@ -1,6 +1,6 @@
-import { WritingData } from './WritingTypes';
+import { ServiceData } from '@/components/service/serviceDetail/servicetypes/ServiceTypes';
 
-export const writingData: WritingData = {
+export const writingData: ServiceData = {
   categories: [
     {
       id: 'writing-services',

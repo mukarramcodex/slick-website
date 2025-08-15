@@ -1,6 +1,5 @@
-import Process from "@/components/service/serviceDetail/process/Process";
 
-export const developmentProcess = [
+export const designdevelopmentProcess = [
     {
         step: 1,
         title: "Discovery & Planning",

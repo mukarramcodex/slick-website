@@ -4,7 +4,7 @@ import ServiceOffered from "@/components/service/serviceDetail/serviceOffered/Se
 import TechStack from "@/components/service/techStack/TechStack";
 import Process from "@/components/service/serviceDetail/process/Process";
 import { automationdata } from "./AutomationData";
-import { developmentProcess } from "./ProcessData";
+import { automationdevelopmentProcess } from "./ProcessData";
 import { useState } from "react";
 import { techData } from "./TechData";
 const Automation = () => {
@@ -43,7 +43,7 @@ const Automation = () => {
       <Process
         heading='Our Development Process'
         tagline='From planning to maintenance, we ensure a streamlined workflow.'
-        steps={developmentProcess}
+        steps={automationdevelopmentProcess}
       />
     </div>
   );

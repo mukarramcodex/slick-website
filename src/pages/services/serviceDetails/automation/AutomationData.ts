@@ -1,6 +1,6 @@
-import { AutomationData } from "./AutomationTypes";
+import { ServiceData } from "@/components/service/serviceDetail/servicetypes/ServiceTypes";
 
-export const automationdata: AutomationData = {
+export const automationdata: ServiceData = {
     categories: [
         {
             id: 'writing-services',

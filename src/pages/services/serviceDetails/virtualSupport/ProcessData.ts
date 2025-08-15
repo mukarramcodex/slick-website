@@ -1,4 +1,5 @@
-export const automationdevelopmentProcess = [
+
+export const virtualdevelopmentProcess = [
     {
         step: 1,
         title: "Discovery & Planning",
@@ -47,4 +48,4 @@ export const automationdevelopmentProcess = [
         timeline: "Ongoing",
         icon: "fas fa-tools",
     },
-];
+]

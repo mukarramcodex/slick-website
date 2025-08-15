@@ -1,7 +1,19 @@
 
 import ServiceDetailHero from "@/components/service/serviceDetail/hero/ServiceDetailHero"
 import ContentHeroBg from "../../../../assets/serviceDetail/contentWriting/ContentHeroBg.jpg"
+import { useState } from "react";
+import ServiceOffered from "@/components/service/serviceDetail/serviceOffered/ServicesOffered";
+import TechStack from "@/components/service/techStack/TechStack";
+import Process from "@/components/service/serviceDetail/process/Process";
+import { VirtualData } from "./VirtualData";
+import { techData } from "./TechStackData";
+import { virtualdevelopmentProcess } from "./ProcessData";
 const VirtualSupport = () => {
+  const [activeCategory, setActiveCategory] = useState('virtual-services');
+  
+    const handleCategoryChange = (categoryId: string) => {
+      setActiveCategory(categoryId);
+    };
   return (
     <div>
       <ServiceDetailHero
@@ -16,11 +28,27 @@ const VirtualSupport = () => {
           "Multi-Channel Approach",
           "Data-Driven Results",
         ]}
-        rightImage="https://readdy.ai/api/search-image?query=creative%20content%20strategy%20meeting..."
-        rightImageAlt="Content Strategy Team"
-        statIcon="ph ph-chart-line-up"
-        statValue="300%"
-        statLabel="Engagement Increase"
+      />
+      <ServiceOffered
+        heading="Our Services"
+        tagline="Choose from our comprehensive range of professional services designed to meet your specific needs"
+        categories={VirtualData.categories}
+        activeCategory={activeCategory}
+        onCategoryChange={handleCategoryChange}
+        buttonText="Get Started"
+        customButtonText="Need Custom Solutions?"
+        customButtonLink="/contact"
+      />
+      <TechStack
+        heading="Technology Stack"
+        tagline="We leverage the latest technologies and frameworks to build robust, scalable, and future-proof solutions"
+        categories={techData}
+        activeCategory={activeCategory}
+      />
+      <Process
+      heading='Our Development Process'
+      tagline='From planning to maintenance, we ensure a streamlined workflow.'
+      steps={virtualdevelopmentProcess}
       />
     </div>
   )

@@ -1,14 +1,14 @@
-import { ServiceData } from "@/components/service/serviceDetail/servicetypes/ServiceTypes";
+import { ServiceData } from '@/components/service/serviceDetail/servicetypes/ServiceTypes';
 
-export const designData: ServiceData = {
+export const softwareData: ServiceData = {
     categories: [
         {
-            id: 'design-services',
-            title: 'Design Services',
+            id: 'writing-services',
+            title: 'Writing Services',
             description: 'Professional content creation and copywriting solutions',
             services: [
                 {
-                    id: 'design-writing',
+                    id: 'blog-writing',
                     title: 'Blog Writing',
                     description: 'Engaging blog posts that drive traffic and establish thought leadership',
                     features: ['SEO Optimized', 'Research-Based', 'Engaging Content', 'Regular Publishing'],
