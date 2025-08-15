@@ -15,8 +15,8 @@ export const teamMembers: TeamMember[] = [
     name: 'Muhammad Mukaram Ali',
     position: 'CTO & Lead Developer',
     image: MukarramAli,
-    bio: 'I\'m Mukarram Ali, a Full Stack PHP/Laravel & WordPress Developer creating modern, responsive, and SEO-friendly web solutions. I build scalable, user-focused websites that deliver performance and impact.',
-    expertise: ['PHP/Laravel Development', 'WordPress (Custom & Full Stack)', 'Front-End (React, Vue, Tailwind CSS, Bootstrap)','QA Automation & Testing']
+    bio: 'I\'m Mukarram Ali, a Full Stack Developer creating modern, responsive, and SEO-friendly web solutions. I build scalable, user-focused websites that deliver performance and impact.',
+    expertise: ['Front-End (React, Vue, Tailwind CSS, Bootstrap)', 'Back-End (PHP, NodeJs, Python)', 'DataBases (SQLite, MySql, PostgreSQL)','QA Automation & Testing', 'CMS Expert' ,'Technical SEO Expert']
   },
   {
     name: 'Nabia Waqar',
