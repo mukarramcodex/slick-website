@@ -26,9 +26,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900/50 to-black/50 p-8 rounded-2xl border border-gray-800 hover:border-[#e6002e]/50 hover:shadow-[0_0_30px_rgba(230,0,46,0.2)] transition-all duration-300 group cursor-pointer transform hover:scale-105 ">
+    <div className="bg-gradient-to-b from-[#e6002e]/50 to-black/50 p-8 rounded-2xl border border-gray-800 hover:border-[#e6002e]/50 hover:shadow-[0_0_30px_rgba(230,0,46,0.2)] transition-all duration-300 group cursor-pointer transform hover:scale-105 ">
       <div className="w-16 h-16 mb-6 rounded-full bg-gradient-to-r from-[#e6002e]/20 to-transparent flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(230,0,46,0.5)] transition-all">
-        <i className={`${service.icon} text-3xl text-[#ffffff]`}></i>
+        {/* <i className={`${service.icon} text-3xl text-[#ffffff]`}></i> */}
+        <service.icon className="w-8 h-8 text-white"/>
       </div>
       <h3 className="text-xl font-bold mb-4">{service.title}</h3>
       <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
