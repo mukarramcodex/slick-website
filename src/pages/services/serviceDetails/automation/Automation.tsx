@@ -8,7 +8,7 @@ import { developmentProcess } from "./ProcessData";
 import { useState } from "react";
 import { techData } from "./TechData";
 const Automation = () => {
-  const [activeCategory, setActiveCategory] = useState('automation');
+  const [activeCategory, setActiveCategory] = useState('automation-services');
 
   const handleCategoryChange = (categoryId: string) => {
     setActiveCategory(categoryId);

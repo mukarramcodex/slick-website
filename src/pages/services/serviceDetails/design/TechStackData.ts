@@ -1,6 +1,6 @@
 import { TechStackCategory } from "@/components/service/techStack/TechStackTypes";
 
-export const techStackData: TechStackCategory[] = [
+export const techData: TechStackCategory[] = [
     {
         categoryId: "writing-services",
         categoryName: "Writing Services",

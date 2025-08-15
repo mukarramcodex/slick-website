@@ -4,7 +4,9 @@ import ServiceOffered from "@/components/service/serviceDetail/serviceOffered/Se
 import { writingData } from "../contentWriting/WritingData"
 import { useState } from "react"
 import TechStack from "@/components/service/techStack/TechStack"
-import { techStackData } from "./TechStackData"
+import { techData } from "./TechStackData"
+import Process from "@/components/service/serviceDetail/process/Process"
+import { developmentProcess } from "./ProcessData"
 const Design = () => {
 const [activeCategory, setActiveCategory] = useState('writing-services');
 
@@ -39,8 +41,13 @@ const [activeCategory, setActiveCategory] = useState('writing-services');
       <TechStack
       heading="Technology Stack"
       tagline="We leverage the latest technologies and frameworks to build robust, scalable, and future-proof solutions"
-      categories={techStackData}
+      categories={techData}
       activeCategory={activeCategory}
+      />
+      <Process 
+      heading='Our Development Process'
+            tagline='From planning to maintenance, we ensure a streamlined workflow.'
+            steps={developmentProcess}
       />
     </div>
   )
